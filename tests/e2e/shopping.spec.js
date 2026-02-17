@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
-import {LoginPage} from '../tests/pages/login.page'
-import {InventoryPage} from '../tests/pages/inventory.page'
-import {CartPage} from '../tests/pages/cart.page'
+import {LoginPage} from '../../pages/login.page'
+import {InventoryPage} from '../../pages/inventory.page'
+import {CartPage} from '../../pages/cart.page'
 
 let loginPage, inventoryPage, cartPage;
 

@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
-import {userIndex, storeUser} from '../utils/user'
-import {apiLogin} from '../utils/apiClient'
+import {userIndex, storeUser} from '../../utils/user'
+import {apiLogin} from '../../utils/apiClient'
 
 let token;
 
