@@ -4,17 +4,12 @@ export class InventoryPage{
         this.cartIcon = page.locator('[data-test=shopping-cart-link]');
     }
 
-    // addItemByName(name){
-    //     return this.page.locator(`text=${name}`).locator('..').locator('button');
-    // }
-
     addItemByName(name){
         return this.page
             .locator('.inventory_item')
             .filter({ hasText: name })
-            .locator('button');
+            .getByRole('button');
     }
-
 
     async addItem(name){
         await this.addItemByName(name).click();

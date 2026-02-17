@@ -4,10 +4,6 @@ export class CartPage{
         this.checkoutBtn = page.locator('[data-test=checkout]');
     }
 
-    // removeItemByname(name){
-    //     return this.page.locator(`text=${name}`).locator('..').locator('button');
-    // }
-
     removeItemByName(name){
         return this.page
             .locator('.cart_item')
