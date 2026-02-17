@@ -8,7 +8,7 @@ node_modules/
 /playwright/.auth/
 
 
-# # Env files
-# .env
-# .env.*
-# env/
+# Env files
+.env
+.env.*
+env/
