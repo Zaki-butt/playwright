@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test';
-import { apiRegister, apiLogin, apiMe, apiLogout } from '../utils/apiClient';
+import { apiRegister, apiLogin, apiMe, apiLogout } from '../../utils/apiClient';
 
 let token;
 
