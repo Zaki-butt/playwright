@@ -18,4 +18,6 @@ export class InventoryPage{
     async goToCart(){
         await this.cartIcon.click();
     }
+
+    
 }

@@ -22,6 +22,8 @@ test('e2e shopping', async({page}) =>{
 
     await inventoryPage.goToCart();
 
+    await expect(page).toHaveURL(/cart\.html/);
+
     await cartPage.removeItem('Sauce Labs Bike Light');
 
     await page.goBack();
@@ -33,5 +35,23 @@ test('e2e shopping', async({page}) =>{
     await cartPage.checkout();
 
     await expect(page).toHaveURL(/checkout-step-one\.html/);
+
+    await cartPage.addInfo('demo', 'user', '123');
+
+    await expect(page).toHaveURL(/checkout-step-two\.html/);
+
+    await cartPage.finish();
+
+    await expect(page).toHaveURL(/checkout-complete\.html/);
+
+    await cartPage.verifyOrderSuccess();
+
+    await cartPage.backHome();
+
+    await expect(page).toHaveURL(/inventory\.html/);
+
+    await cartPage.logout();
+    await expect(page).toHaveURL(/saucedemo\.com/);
+
 
 });
